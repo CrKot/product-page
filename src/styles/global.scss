@@ -1,0 +1,67 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  font-weight: normal;
+}
+
+body {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  background: var(--white);
+  font-family: $font;
+
+  text-rendering: geometricPrecision;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+a {
+  color: var(--black-secondary);
+  text-decoration: none;
+  transition: color $transitionDuration ease;
+
+  @media (hover: hover) {
+    &:hover {
+      color: var(--brand-hover);
+    }
+  }
+}
+
+header {
+  padding: 0 $paddingSm;
+}
+
+footer {
+  padding-bottom: $paddingXlg;
+  margin-left: $paddingSm;
+  margin-right: $paddingSm;
+}
+
+button {
+  background: transparent;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  transition: $transitionDuration ease;
+  transition-property: color, background;
+}
+
+main {
+  @include containerMixin();
+
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}

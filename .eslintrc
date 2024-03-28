@@ -1,0 +1,63 @@
+{
+  "root": true,
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "node": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:vue/vue3-recommended",
+    "@vue/eslint-config-typescript",
+    "@vue/typescript/recommended"
+  ],
+  "parserOptions": {
+    "parser": "@typescript-eslint/parser",
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "plugins": ["@typescript-eslint"],
+  "rules": {
+    "no-console": 1,
+    "vue/require-v-for-key": 0,
+    "vue/attribute-hyphenation": 0,
+    "vue/v-on-event-hyphenation": 0,
+    "vue/require-default-prop": 0,
+    "vue/v-slot-style": [
+      "warn",
+      {
+        "named": "longform"
+      }
+    ],
+    "vue/valid-v-for": 0,
+    "vue/html-self-closing": 0,
+    "vue/multi-word-component-names": 0,
+    "@typescript-eslint/ban-ts-comment": 0,
+    "vue/one-component-per-file": 0,
+    "@typescript-eslint/no-explicit-any": 0,
+    "vue/max-attributes-per-line": [
+      "warn",
+      {
+        "singleline": {
+          "max": 2
+        },
+        "multiline": {
+          "max": 2
+        }
+      }
+    ],
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      {
+        "args": "all",
+        "argsIgnorePattern": "^_",
+        "caughtErrors": "all",
+        "caughtErrorsIgnorePattern": "^_",
+        "destructuredArrayIgnorePattern": "^_",
+        "varsIgnorePattern": "^_",
+        "ignoreRestSiblings": true
+      }
+    ]
+  }
+}

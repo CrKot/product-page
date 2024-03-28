@@ -1,0 +1,32 @@
+$font: 'Gotham Book';
+$font-bold: 'Gotham Bold';
+$font-medium: 'Gotham Medium';
+$font-pro: 'Gotham Pro';
+
+@font-face {
+  font-family: $font;
+  font-style: normal;
+  font-weight: normal;
+  src: url('./fonts/gotham_book.otf');
+}
+
+@font-face {
+  font-family: $font-bold;
+  font-style: normal;
+  font-weight: bold;
+  src: url('./fonts/gotham_bold.otf');
+}
+
+@font-face {
+  font-family: $font-medium;
+  font-style: normal;
+  font-weight: normal;
+  src: url('./fonts/gotham_medium.otf');
+}
+
+@font-face {
+  font-family: $font-pro;
+  font-style: normal;
+  font-weight: normal;
+  src: url('./fonts/gothampro_medium.ttf');
+}

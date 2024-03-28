@@ -1,0 +1,29 @@
+@mixin containerMixin() {
+  width: 100%;
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: $paddingXs;
+  padding-right: $paddingXs;
+
+  @supports (padding: max(0px)) {
+    padding-left: max($paddingXs, env(safe-area-inset-left));
+    padding-right: max($paddingXs, env(safe-area-inset-right));
+  }
+
+  @media (min-width: $xs) {
+    padding-left: $paddingSm;
+    padding-right: $paddingSm;
+
+    @supports (padding: max(0px)) {
+      padding-left: max($paddingSm, env(safe-area-inset-left));
+      padding-right: max($paddingSm, env(safe-area-inset-right));
+    }
+  }
+}
+
+@mixin fontMixin($size, $fontType, $lh) {
+  font-family: $fontType;
+  font-size: $size;
+  line-height: $lh;
+}
